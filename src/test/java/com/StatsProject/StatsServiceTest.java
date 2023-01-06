@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 public class StatsServiceTest {
     StatsService service = new StatsService();
-    long[] sales = { 8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18 };
+    long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
     long expectedSum = 8 + 15 + 13 + 15 + 17 + 20 + 19 + 20 + 7 + 14 + 14 + 18;
 
@@ -51,8 +51,9 @@ public class StatsServiceTest {
         Assertions.assertEquals(expected, actual);
         System.out.println("Меньше среднего в " + actual + " месяцах");
     }
+
     @Test
-    public void moreThanAverge() {
+    public void moreThanEverage() {
         long actual = service.moreThenAverage(sales);
         long expected = 5;
         Assertions.assertEquals(expected, actual);
