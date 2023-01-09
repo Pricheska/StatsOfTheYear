@@ -15,7 +15,6 @@ public class StatsService {
         return sum(sales) / sales.length;
     }
 
-    int average = 15;
 
     public int maxMonth(long[] sales) {
         int maxMonth = 0;
@@ -43,6 +42,7 @@ public class StatsService {
 
     public long lessThanAverage(long[] sales) {
         long counter = 0;
+        long average = averageStats(sales);
         for (long sale : sales) {
             if (sale < average) {
                 counter++;
@@ -53,6 +53,7 @@ public class StatsService {
 
     public long moreThenAverage(long[] sales) {
         long counter = 0;
+        long average = averageStats(sales);
         for (long sale : sales) {
             if (sale > average) {
                 counter++;
